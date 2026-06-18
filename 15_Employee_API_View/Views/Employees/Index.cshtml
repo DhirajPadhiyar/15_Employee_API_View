@@ -1,0 +1,29 @@
+﻿@model List<Employee>
+
+
+
+<div class="container">
+    <div class="card shadow-lg col-md-6 mx-auto p-4">
+        <h2 class="text-center text-danger">Employee List</h2>
+
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-dark">
+                <tr class="text-center">
+                    <td>Id</td>
+                    <td>Employee Name</td>
+                    <td>Salary</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr class="text-center">
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td class="text-end">₹ @item.Salary.ToString("N2")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
